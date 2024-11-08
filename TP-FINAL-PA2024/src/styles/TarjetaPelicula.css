@@ -1,0 +1,108 @@
+/* src/components/TarjetaPelicula.css */
+
+/* Contenedor de la tarjeta */
+.tarjeta-pelicula {
+    width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.tarjeta-pelicula:hover {
+    transform: scale(1.05); /* Efecto de ampliación al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el poster de la película */
+.poster-pelicula {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Información debajo del poster */
+.info-pelicula {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Estilo para el título de la película */
+.titulo-pelicula {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+/* Estilo del botón "Ver más" */
+.btn-ver-mas {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #0056b3;
+}
+
+
+/* src/components/ListaPeliculas.css */
+
+/* Estilos para la grilla de películas */
+.grilla-peliculas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 15px; /* Espacio entre las tarjetas */
+    margin: 0 auto; /* Centra la grilla horizontalmente */
+    max-width: 800px; /* Limita el ancho máximo de la grilla */
+    padding: 20px; /* Un poco de padding alrededor de la grilla */
+}
+
+/* Estilos para los controles de paginación */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.paginacion button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.paginacion button:hover {
+    background-color: #0817BA;
+}
+
+.paginacion button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Cambiar el fondo de la página */
+body {
+    background: linear-gradient(45deg, #BA2DA7, #420769); /* Un color de fondo suave, puedes cambiarlo */
+    color: #fff; /* Color del texto (negro suave para un buen contraste) */
+    font-family: Arial, sans-serif; /* Fuente para el contenido */
+    margin: 0;
+    padding: 0;
+}
