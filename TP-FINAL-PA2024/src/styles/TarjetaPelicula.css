@@ -106,3 +106,103 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
+/* src/components/Movie.css */
+
+/* Estilo general para la vista de la película */
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1000px;
+    color: #333;
+}
+
+/* Estilo para los detalles adicionales de la película */
+.movie-extra-details {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Enlace para volver */
+.movie-extra-details a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.movie-extra-details a:hover {
+    text-decoration: underline;
+}
+
+/* Títulos de los detalles adicionales */
+.movie-extra-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.movie-extra-details span {
+    font-weight: normal;
+    color: #555;
+}
+
+/* Estilo para el botón de ver trailer */
+.movie-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.movie-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del iframe para el trailer */
+.movie-trailer {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Estilo del botón de cerrar trailer */
+.movie-close-trailer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-close-trailer:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo del contenedor del trailer */
+.movie-trailer-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px;
+}

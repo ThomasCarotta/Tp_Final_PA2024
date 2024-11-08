@@ -55,6 +55,7 @@ const ListaPeliculas = ({ searchQuery }) => {
                 {peliculasActuales.map((pelicula) => (
                     <TarjetaPelicula
                         key={pelicula.id}
+                        id={pelicula.id}  // Aquí pasamos el id correctamente
                         title={pelicula.title}
                         poster_path={pelicula.poster_path}
                     />

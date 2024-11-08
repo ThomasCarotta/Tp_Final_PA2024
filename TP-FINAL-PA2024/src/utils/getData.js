@@ -1,3 +1,4 @@
+
 const ACCES_TOKEN = import.meta.env.VITE_ACCES_TOKEN; // Accede al token desde .env
 
 const options = {
@@ -15,6 +16,7 @@ const getData = async (url) => {
             throw new Error('Error: ' + response.status); // Manejo de errores
         }
         const data = await response.json(); // Convierte la respuesta a JSON
+        console.log(data);
         return data; // Retorna los datos
     } catch (error) {
         console.log("Error fetching data: ", error); // Imprime errores en la consola

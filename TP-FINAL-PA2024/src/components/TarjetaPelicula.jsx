@@ -1,17 +1,19 @@
 // src/components/TarjetaPelicula.jsx
 import React from "react";
-import "../styles/TarjetaPelicula.css";
+import { Link } from "react-router-dom";
+import '../styles/TarjetaPelicula.css';
 
-const TarjetaPelicula = ({ title, poster_path }) => {
-    const imageUrl = `https://image.tmdb.org/t/p/w500${poster_path}`;
+const TarjetaPelicula = ({ id, title, poster_path }) => {
+    const posterUrl = poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : "https://via.placeholder.com/500x750?text=No+Image+Available";
 
     return (
         <div className="tarjeta-pelicula">
-            <img className="poster-pelicula" src={imageUrl} alt={title} />
-            <div className="info-pelicula">
-                <p className="titulo-pelicula">{title}</p>
-                <button className="btn-ver-mas">Ver más</button>
-            </div>
+            <Link to={`/pelicula/${id}`}>
+                <img className="poster-pelicula" src={posterUrl} alt={title} />
+                <div className="info-pelicula">
+                    <h4 className="titulo-pelicula">{title}</h4>
+                </div>
+            </Link>
         </div>
     );
 };
