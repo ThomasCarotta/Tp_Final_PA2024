@@ -206,3 +206,83 @@ body {
     overflow: hidden;
     margin-top: 20px;
 }
+
+/* src/components/TrailerPage.css */
+
+/* Contenedor principal de la página de trailers */
+.trailer-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1000px;
+    color: #333;
+}
+
+/* Estilo del iframe para el trailer */
+.trailer-page iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* Mensaje cuando no hay trailer disponible */
+.trailer-page p {
+    font-size: 18px;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Fondo y estilo general de la página */
+body {
+    background: linear-gradient(45deg, #BA2DA7, #420769); /* Un color de fondo suave, puedes cambiarlo */
+    color: #fff; /* Color del texto (negro suave para un buen contraste) */
+    font-family: Arial, sans-serif; /* Fuente para el contenido */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para los botones de la página */
+.trailer-page button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.trailer-page button:hover {
+    background-color: #0056b3;
+}
+
+.trailer-page {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.back-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
