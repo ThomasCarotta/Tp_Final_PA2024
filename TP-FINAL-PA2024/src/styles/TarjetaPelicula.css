@@ -301,15 +301,55 @@ body {
     justify-content: center;
 }
 
-
-/* Al ocultar el trailer, se aplica una transición suave */
 .trailer-page {
     transition: opacity 0.3s ease;
     opacity: 1; /* Totalmente visible */
 }
 
-/* Clase cuando el trailer se oculta */
 .trailer-page.hidden {
     opacity: 0;
     pointer-events: none; /* Para que no interfiera */
+}
+
+/* Estilos para la grilla de películas */
+.grilla-peliculas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 15px; /* Espacio entre las tarjetas */
+    margin: 0 auto; /* Centra la grilla horizontalmente */
+    max-width: 1000px; /* Limita el ancho máximo de la grilla */
+    padding: 20px; /* Un poco de padding alrededor de la grilla */
+    grid-template-rows: repeat(2, 1fr); /* Asegura que haya 2 filas por defecto */
+    justify-items: center; /* Centra las tarjetas horizontalmente */
+    align-items: center; /* Centra las tarjetas verticalmente */
+}
+
+/* Para pantallas pequeñas (menos de 600px), la grilla se convierte en 1 columna */
+@media (max-width: 600px) {
+    .grilla-peliculas {
+        grid-template-columns: 1fr; /* 1 columna */
+        grid-template-rows: auto; /* Ajuste automático de las filas */
+    }
+}
+
+/* Para pantallas medianas (600px - 1024px), la grilla se convierte en 2 columnas */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .grilla-peliculas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-rows: auto; /* Ajuste automático de las filas */
+    }
+}
+
+/* Para pantallas grandes (más de 1024px), la grilla tiene 2 columnas por fila */
+@media (min-width: 1024px) {
+    .grilla-peliculas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+/* Para pantallas extra grandes (más de 1400px), la grilla puede tener hasta 4 columnas */
+@media (min-width: 1400px) {
+    .grilla-peliculas {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    }
 }
